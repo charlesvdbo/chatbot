@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Assistant</title>
+  <link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body { height: 100%; background: transparent; }
+
+    /* Personnalisation du widget */
+    :root {
+      --chat--color-primary: #2D2D2D;
+      --chat--color-primary-shade-50: #404040;
+      --chat--color-secondary: #F5F5F5;
+      --chat--window--width: 100%;
+      --chat--window--height: 100%;
+      --chat--border-radius: 12px;
+      --chat--message--bot--background: #F8F8F8;
+      --chat--message--user--background: #2D2D2D;
+      --chat--message--user--color: #FFFFFF;
+      --chat--header--background: #FFFFFF;
+      --chat--header--color: #2D2D2D;
+    }
+
+    /* Forcer le widget à prendre tout l'espace */
+    #n8n-chat {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+  </style>
+</head>
+<body>
+  <div id="n8n-chat"></div>
+
+  <script type="module">
+    import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
+
+    createChat({
+      webhookUrl: 'https://charlesvdb.app.n8n.cloud/webhook/f75ee359-cc16-4307-b6af-ecaa2c9f38dd/chat',
+      target: '#n8n-chat',
+      mode: 'window',        // 'window' | 'fullscreen'
+      showWelcomeScreen: true,
+      defaultLanguage: 'fr',
+      initialMessages: [
+        'Bonjour 👋',
+        'Comment puis-je vous aider ?'
+      ],
+      i18n: {
+        fr: {
+          title: 'Assistant',
+          subtitle: 'Posez vos questions',
+          inputPlaceholder: 'Écrivez votre message…',
+          getStarted: 'Démarrer la conversation',
+          closeButtonTooltip: 'Fermer',
+        },
+      },
+    });
+  </script>
+</body>
+</html>
