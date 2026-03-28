@@ -24,6 +24,24 @@
       --chat--header--color: #2D2D2D;
     }
 
+    /* Cartouche épais noir sur le champ de saisie */
+.n8n-chat-input,
+textarea,
+input[type="text"] {
+  border: 3px solid #000000 !important;
+  border-radius: 8px !important;
+  padding: 12px !important;
+  background: #FFFFFF !important;
+}
+
+/* Texte placeholder en rose */
+.n8n-chat-input::placeholder,
+textarea::placeholder,
+input[type="text"]::placeholder {
+  color: #FF69B4 !important;
+  font-weight: 500 !important;
+}
+
     /* Forcer le widget à prendre tout l'espace */
     #n8n-chat {
       height: 100vh;
