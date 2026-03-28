@@ -41,6 +41,24 @@ input[type="text"]::placeholder {
   color: #FF69B4 !important;
   font-weight: 500 !important;
 }
+    /* Bouton envoyer en rose */
+.n8n-chat-inputs-send-button,
+button[type="submit"],
+.chat-send-button {
+  background-color: #FF69B4 !important;
+  border: 3px solid #000000 !important;
+  border-radius: 8px !important;
+  color: #FFFFFF !important;
+}
+
+/* Hover : rose plus foncé au survol */
+.n8n-chat-inputs-send-button:hover,
+button[type="submit"]:hover,
+.chat-send-button:hover {
+  background-color: #FF1493 !important;
+  cursor: pointer !important;
+}
+
 
     /* Forcer le widget à prendre tout l'espace */
     #n8n-chat {
@@ -70,7 +88,7 @@ input[type="text"]::placeholder {
         fr: {
           title: '',
           subtitle: '',
-          inputPlaceholder: 'Ask me (in any language)…',
+          inputPlaceholder: 'Ask me anything (in any language)…',
           getStarted: 'Démarrer la conversation',
           closeButtonTooltip: 'Fermer',
         },
