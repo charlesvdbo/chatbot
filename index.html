@@ -54,6 +54,42 @@ input[type="text"]::placeholder {
   background-color: #FF1493 !important;
   cursor: pointer !important;
 }
+    /* Conteneur du champ + bouton */
+.chat-input,
+.chat-inputs,
+[class*="chat-input-wrapper"],
+[class*="chat-footer"] {
+  display: flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  padding: 8px !important;
+}
+
+/* Champ de saisie — même hauteur que le bouton */
+.n8n-chat-input,
+textarea,
+input[type="text"] {
+  height: 48px !important;
+  border: 3px solid #000000 !important;
+  border-radius: 8px !important;
+  padding: 12px !important;
+  background: #FFFFFF !important;
+  flex: 1 !important;        /* prend tout l'espace disponible */
+  align-self: center !important;
+}
+
+/* Bouton — même hauteur que le champ */
+.chat-input-send-button {
+  height: 48px !important;
+  width: 48px !important;
+  background-color: #FF69B4 !important;
+  border: 3px solid #000000 !important;
+  border-radius: 8px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  flex-shrink: 0 !important;  /* ne rétrécit pas */
+}
 
 /* Icône/flèche à l'intérieur du bouton */
 .chat-input-send-button svg path,
