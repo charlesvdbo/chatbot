@@ -41,24 +41,26 @@ input[type="text"]::placeholder {
   color: #FF69B4 !important;
   font-weight: 500 !important;
 }
-    /* Bouton envoyer en rose */
-.n8n-chat-inputs-send-button,
-button[type="submit"],
-.chat-send-button {
+  /* Bouton envoyer en rose */
+.chat-input-send-button {
   background-color: #FF69B4 !important;
   border: 3px solid #000000 !important;
   border-radius: 8px !important;
   color: #FFFFFF !important;
 }
 
-/* Hover : rose plus foncé au survol */
-.n8n-chat-inputs-send-button:hover,
-button[type="submit"]:hover,
-.chat-send-button:hover {
+/* Hover : rose foncé au survol */
+.chat-input-send-button:hover {
   background-color: #FF1493 !important;
   cursor: pointer !important;
 }
 
+/* Icône/flèche à l'intérieur du bouton */
+.chat-input-send-button svg path,
+.chat-input-send-button svg {
+  fill: #FFFFFF !important;
+  stroke: #FFFFFF !important;
+}
 
     /* Forcer le widget à prendre tout l'espace */
     #n8n-chat {
